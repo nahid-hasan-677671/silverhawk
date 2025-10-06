@@ -67,11 +67,23 @@ header .main-menu .nav-column ul li a {
     text-decoration: none;
     color: #333;
     transition: color 0.4s;
+    position: relative;
 }
 
-header .main-menu .nav-column ul li a:hover {
-    color: #173a69;
-    border-bottom: 2px solid #173a69;
+header .main-menu .nav-column ul li a::after {
+    content: '';
+
+    position: absolute;
+    background-color: #173a69;
+    height: 4px;
+    width: 0;
+    bottom: -40px;
+    left: 0;
+    transition: 0.4s;
+}
+
+header .main-menu .nav-column ul li a:hover:after {
+    width: 100%;
 
 }
 
@@ -92,8 +104,8 @@ header .main-menu .nav-column ul li a:hover {
 
 
 
-.right-side{
-    margin-left:150px ;
+.right-side {
+    margin-left: 150px;
 }
 
 
@@ -101,7 +113,7 @@ header .main-menu .nav-column ul li a:hover {
     font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
-    
+
 }
 
 .home-slider .slider-one .container .right-side h1 {
